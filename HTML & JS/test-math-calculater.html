@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logic</title>
+    <style>
+        input{
+            margin: 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <label>Number 1</label>
+    <input type="number" id="number1"> <br>
+    <label>Namber 2</label>
+    <input type="number" id="number2"> <br>
+
+  <button onclick="add()" style="background-color: blue;">+</button>
+  <button onclick="sub()" style="background-color: rgb(45, 219, 89);">-</button>
+  <button onclick="multiply()" style="background-color: rgb(223, 30, 5);">x</button>
+  <button onclick="div()" style="background-color: rgb(185, 233, 14);">/</button>
+    
+
+    <p id="result"></p>
+
+
+    <script>
+        function add(){
+            let n1=document.getElementById("number1").value;
+            let n2=document.getElementById("number2").value;
+            let result=parseInt(n1)+parseInt(n2);
+            document.getElementById("result").innerHTML=("result =" +result );
+
+        }
+
+        function sub(){
+            let n1=document.getElementById("number1").value;
+            let n2=document.getElementById("number2").value;
+            let result=n1-n2;
+            document.getElementById("result").innerHTML=("result =" +result );
+        }
+
+        function multiply(){
+            let n1=document.getElementById("number1").value;
+            let n2=document.getElementById("number2").value;
+            let result=n1*n2;
+            document.getElementById("result").innerHTML=("result =" +result ); 
+
+        }
+        function div(){
+            let n1=document.getElementById("number1").value;
+            let n2=document.getElementById("number2").value;
+            let result=n1/n2;
+            document.getElementById("result").innerHTML=("result =" +result );
+
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>
