@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_result</title>
+</head>
+<body>
+   Form Result
+<pre> 
+   <label id="name">Name</label>
+   <label id="email">Email</label>
+   <label id="password">Password</label>
+
+
+</pre>
+
+   <script>
+   
+
+    const name=document.getElementById("name").innerHTML=localStorage.getItem("name");
+    const email=document.getElementById("email").innerHTML=localStorage.getItem("email");
+    const password=document.getElementById("password").innerHTML=localStorage.getItem("password");
+
+
+   </script>
+
+</body>
+</html>
