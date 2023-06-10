@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>price and discound</title>
+</head>
+<body>
+<pre> 
+    <label>Unit Price</label>
+    <input type="text" id="unit" >
+
+    <label>Quantity</label>
+    <input type="text" id="quantity" oninput="calculation()">
+  
+    <label>Price</label>
+    <input type="text" id="price">
+    <label>Discount</label>
+    <input type="text" id="discount"> 
+    
+    <label>Payable Amount</label>
+    <input type="text" id="Payable"> 
+
+
+    <!-- <input type="submit" value="submit"> -->
+    
+</pre>
+
+    <script>
+
+        function calculation(){
+            // price=document.getElementById("price").value;
+            // discount=document.getElementById("discount").value;
+            // payable=document.getElementById("payable").value;
+            unit=document.getElementById("unit").value;
+            quantity=document.getElementById("quantity").value;
+
+            price=unit*quantity;
+            discountAmount=0;
+            payableAmount=0;
+
+
+           if(price<=500){
+                discountAmount=price*.05;
+                payableAmount= price-discountAmount;
+            }
+            else if(price<=700){
+                discountAmount=price*.07;
+                payableAmount= price-discountAmount;
+            }
+            else {
+                discountAmount=price*.010;
+                payableAmount= price-discountAmount;
+            }
+
+            document.getElementById("discount").value=discountAmount;
+            document.getElementById("Payable").value=payableAmount;
+            document.getElementById("price").value=price;
+    
+
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
