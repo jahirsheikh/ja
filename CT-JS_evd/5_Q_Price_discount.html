@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>price </title>
+</head>
+<body>
+
+    <label>Price</label>
+    <input type="text" id="price" ><br>
+
+    <label>Discount</label>
+    <input type="text" id="discount" oninput="cal()"><br>
+
+    <label>Payable</label>
+    <input type="text" id="payable"><br>
+
+    <script>
+
+       function cal(){
+
+        discoutTk=0;
+        paytk=0;
+
+        if(price<=500){
+            discoutTk=price*(10/100);
+            payTk= price-discountTk;   
+
+        }
+
+        else if(price<=1000){
+            discoutTk=price*(20/100);  
+            payTk= price-discountTk; 
+
+        }
+        else if(price<=1100){
+            discoutTk=price*(30/100); 
+            payTk= price-discountTk;  
+
+        }
+
+        else{
+            discoutTk=price*(30/100); 
+            payTk= price-discountTk;  
+
+    
+
+        }
+
+
+
+
+
+       }
+
+       document.getElementById("discount").value;
+       document.getElementById("payable").value;
+
+    
+
+
+
+
+    </script>
+    
+</body>
+</html>
