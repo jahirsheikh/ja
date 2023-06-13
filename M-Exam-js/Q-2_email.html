@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2 Email </title>
+</head>
+<body>
+    <h1> Question-2 test user email address </h1>
+
+    <script>
+
+        let email=prompt(" Pls Enter you Email");
+           let regEX= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            if(regEX.test(email)){
+                alert("Email is Correct");
+
+            }
+            else{
+                alert("Email is Incorrect");
+                
+            }
+
+        
+
+
+
+    </script>
+    
+
+
+
+</body>
+</html>

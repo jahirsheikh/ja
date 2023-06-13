@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1 Form</title>
+</head>
+<body>
+    <h1> Question-1 online form </h1>
+
+    <form id="myform">
+
+          <label>Name</label>
+          <input type="text" id="name"><p></p>
+          <label>Contact</label>
+          <input type="text" id="contact"><p></p>
+          <label>Remarks</label><br>
+          <textarea name="" id="remarks" cols="30" rows="5"></textarea><p></p>
+
+          <label for="">Gender</label>
+          <input type="radio" name="gender" value="male">Male
+          <input type="radio" name="gender" value="female">Female <p></p>
+
+          <label for="course">Course</label>
+          <input type="checkbox" name="course" value="NI">NT
+          <input type="checkbox" name="course" value="IAD">IAD
+          <input type="checkbox" name="course" value="DDD">DDD 
+          <input type="checkbox" name="course" value="ESAD">ESAD <p></p>
+
+          <label for="location">Location</label>
+          <select name="" id="location">
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+          </select> <p></p>
+
+
+
+    <p></p>
+        <input type="submit" value="submit">
+
+    </form>
+
+    <script>
+
+        function datamove(event){
+                event.preventDefault();
+
+
+                const name=document.getElementById("name").value;
+                const contact=document.getElementById("contact").value;
+                const remarks=document.getElementById("remarks").value;
+                const gender=document.querySelector('input[name="gender"]:checked').value;
+                const location=document.getElementById("location").value;
+                let mycourse=[];
+            const course=document.querySelectorAll('input[name="course"]:checked');
+            course.forEach(function(course){
+                mycourse.push(course.value);
+            })
+
+
+
+                let output="Name: "+name+ "<br>"
+                    output+="Contact: "+contact+ "<br>"
+                    output+="Remarks: "+remarks+ "<br>"
+                    output+="Gender: "+gender+ "<br>"
+                    output+="Course: "+mycourse.join(",")+ "<br>"
+                    output+="Location: "+location+ "<br>"
+
+
+                    let run=window.open("","_blank");
+                    run.document.write("<p>"+output+ "</p>")
+
+        
+
+        }
+            let form=document.getElementById("myform");
+            form=addEventListener("submit",datamove );  
+
+
+
+
+    </script>
+    
+
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-3 Prime</title>
+</head>
+<body>
+    <h1> Question-3 Prime Number </h1>
+
+
+
+    <label >Number</label><br>
+    <input type="text" id="number">
+    <br> <p></p>
+    <button onclick="checkPrime()">submit</button>
+
+<script>
+    function checkPrime(){
+            let number=document.getElementById("number").value;
+            let count=0;
+
+            for(let i =1; i<=number; i++){
+
+                if(number%i==0){ 
+                    count =count+1; 
+                }
+            }
+
+            if(count==2){
+                alert("Prime Number");
+            }
+            else{
+                alert("Not Prime Number");
+            }
+
+
+    }
+
+
+    
+
+
+</script>
+
+
+
+
+</body>
+</html>
