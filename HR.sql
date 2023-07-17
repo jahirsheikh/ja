@@ -1,156 +1,32 @@
-SELECT *FROM DEPARTMENT;
-
-SELECT DEPARTMENT_ID,LOCATION_ID
-FROM DEPARTMENTS;
-
-
-
-
-
- SELECT LAST_NAME ||' IS A '|| JOB_ID 
- AS "EMPLOYEE DETAILS"
- FROM EMPLOYEES;
- 
- 
- 
- SELECT LAST_NAME, HIRE_DATE
- FROM EMPLOYEES
- WHERE HIRE_DATE LIKE '___MAY%';
-
-SELECT LAST_NAME
- FROM EMPLOYEES
- WHERE LAST_NAME LIKE '_u%';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+--SELECT LAST_NAME, JOB_ID,&jahir, DEPARTMENT_ID, SALARY , hire_date
+--FROM EMPLOYEES
+--WHERE SALARY=&SALARY
+--order by salary;
+----fetch first 5 rows only;
+--
+----
+--CREATE TABLE BOOkS(Name VARCHAR2(20),ID NUMBER);
+--
+--INSERT INTO BOOKS(NAME,ID)
+--VALUES ('ORACAL' , 6);
+--
+--SELECT * FROM BOOKS;
+--
+----UNDEFINE EMPLOYEE_NUM = 200
+--SET VERIFY ON
+--SELECT EMPLOYEE_ID, LAST_NAME, SALARY, DEPARTMENT_ID
+--FROM EMPLOYEES
+--WHERE EMPLOYEE_ID= &EMPLOYEE_NUM;
+--
+----UNDEFINE EMPLOYEE_NUM
+
+SELECT department_name, LOCATION_ID
+FROM departments;
+
+
+SELECT 'My Full Name IS ' ||''|| upper(FIRST_NAME)||' '||  LAST_NAME  AS "Full Name", 
+SALARY*12 AS ANNUAL_SALARY
+FROM employees
+WHERE SALARY*12<100000;
 
 
